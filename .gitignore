@@ -3,3 +3,4 @@
 .idea/
 env.php
 /.phpunit.result.cache
+/data/

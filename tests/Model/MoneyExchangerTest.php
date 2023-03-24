@@ -1,6 +1,6 @@
 <?php
 
-namespace Model;
+namespace CommissionCalculatorAppTest\Model;
 
 use CommissionCalculatorApp\Model\MoneyExchanger;
 use CommissionCalculatorApp\Service\Provider\CurrencyExchangeProviderInterface;

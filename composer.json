@@ -10,7 +10,14 @@
     }
   ],
   "autoload": {
-    "psr-4": {"CommissionCalculatorApp\\": "src/"}
+    "psr-4": {
+      "CommissionCalculatorApp\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CommissionCalculatorAppTest\\": "tests/"
+    }
   },
   "require-dev": {
     "phpunit/phpunit": "^10.0"
