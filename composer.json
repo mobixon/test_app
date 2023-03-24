@@ -16,6 +16,7 @@
     "phpunit/phpunit": "^10.0"
   },
   "require": {
-    "php": "8.2.*"
+    "php": "8.2.*",
+    "ext-curl": "*"
   }
 }

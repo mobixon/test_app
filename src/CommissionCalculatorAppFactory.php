@@ -7,10 +7,10 @@ use CommissionCalculatorApp\Model\MoneyExchangerInterface;
 use CommissionCalculatorApp\Model\TransactionCommissionCalculator;
 use CommissionCalculatorApp\Model\TransactionCommissionCalculatorInterface;
 use CommissionCalculatorApp\Service\JsonFileTransactionListParser;
-use CommissionCalculatorApp\Service\Provider\ApilayerCurrencyExchangeProvider;
 use CommissionCalculatorApp\Service\Provider\BinlistCardBinDataProvider;
 use CommissionCalculatorApp\Service\Provider\CardBinDataProviderInterface;
 use CommissionCalculatorApp\Service\Provider\CurrencyExchangeProviderInterface;
+use CommissionCalculatorApp\Service\Provider\ExchangeratesapiCurrencyExchangeProvider;
 use CommissionCalculatorApp\Service\TransactionListParserInterface;
 
 class CommissionCalculatorAppFactory
@@ -29,7 +29,7 @@ class CommissionCalculatorAppFactory
 
     public function createCurrencyExchangeProvider(): CurrencyExchangeProviderInterface
     {
-        return new ApilayerCurrencyExchangeProvider($this->config);
+        return new ExchangeratesapiCurrencyExchangeProvider($this->config);
     }
 
     public function createMoneyExchangeCalculator(): MoneyExchangerInterface
