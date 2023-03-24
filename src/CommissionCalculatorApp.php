@@ -21,8 +21,8 @@ class CommissionCalculatorApp
 
     public function run(string $input): void
     {
-        $transactions = $this->getFactory()->createTransactionParser()->parse($input);
-        $commissionCalculator = $this->getFactory()->createTransactionCommissionCalculator();
+        $transactions = $this->factory->createTransactionParser()->parse($input);
+        $commissionCalculator = $this->factory->createTransactionCommissionCalculator();
 
         foreach ($transactions as $transaction) {
             try {
@@ -33,10 +33,4 @@ class CommissionCalculatorApp
             }
         }
     }
-
-    public function getFactory(): CommissionCalculatorAppFactory
-    {
-        return $this->factory;
-    }
-
 }
